@@ -1,3 +1,5 @@
+**This version of Medieval Origins Revival has been modified by the Nexusrealms team for use on Rift Realms Season 3**
+_____
 # Medieval Origins Revival 
 **Medieval Origins Revival** is an addon for Origins, adding medieval, fantasy, and mythology inspired origins. 
 
