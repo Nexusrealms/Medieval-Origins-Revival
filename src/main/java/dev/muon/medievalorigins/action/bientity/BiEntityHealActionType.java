@@ -10,54 +10,35 @@ import io.github.apace100.apoli.util.modifier.Modifier;
 import io.github.apace100.apoli.util.modifier.ModifierUtil;
 import io.github.apace100.calio.data.SerializableData;
 import io.github.apace100.calio.data.SerializableDataTypes;
-import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.LivingEntity;
-import net.spell_power.api.SpellPower;
-import net.spell_power.api.SpellSchool;
-import net.spell_power.api.SpellSchools;
 import org.jetbrains.annotations.NotNull;
 
 import java.util.List;
 import java.util.Optional;
 
-public class SpellHealActionType extends BiEntityActionType {
-    public static final TypedDataObjectFactory<SpellHealActionType> DATA_FACTORY = TypedDataObjectFactory.simple(
+public class BiEntityHealActionType extends BiEntityActionType {
+    public static final TypedDataObjectFactory<BiEntityHealActionType> DATA_FACTORY = TypedDataObjectFactory.simple(
             new SerializableData()
-                    .add("magic_school", SerializableDataTypes.STRING)
-                    .add("crit_behavior", SerializableDataTypes.STRING, "normal")
                     .add("base", SerializableDataTypes.FLOAT.optional(), Optional.empty())
-                    .add("scaling_factor", SerializableDataTypes.FLOAT, 1.0f)
                     .add("modifier", Modifier.DATA_TYPE, null)
                     .addFunctionedDefault("modifiers", Modifier.LIST_TYPE, data -> MiscUtil.singletonListOrNull(data.get("modifier")))
                     .validate(MiscUtil.validateAnyFieldsPresent("base", "modifier", "modifiers")),
-            data -> new SpellHealActionType(
-                    data.getString("magic_school"),
-                    data.getString("crit_behavior"),
+            data -> new BiEntityHealActionType(
                     data.get("base"),
-                    data.getFloat("scaling_factor"),
                     data.get("modifiers")
             ),
             (type, data) -> data.instance()
-                    .set("magic_school", type.magicSchool)
-                    .set("crit_behavior", type.critBehavior)
                     .set("base", type.baseHealing)
-                    .set("scaling_factor", type.scalingFactor)
                     .set("modifiers", type.modifiers)
     );
 
-    private final String magicSchool;
-    private final String critBehavior;
     private final Optional<Float> baseHealing;
-    private final float scalingFactor;
     private final List<Modifier> modifiers;
 
-    public SpellHealActionType(String magicSchool, String critBehavior, Optional<Float> baseHealing,
-                               float scalingFactor, List<Modifier> modifiers) {
-        this.magicSchool = magicSchool;
-        this.critBehavior = critBehavior;
+    public BiEntityHealActionType(Optional<Float> baseHealing,
+                                  List<Modifier> modifiers) {
         this.baseHealing = baseHealing;
-        this.scalingFactor = scalingFactor;
         this.modifiers = modifiers;
     }
 
@@ -74,28 +55,6 @@ public class SpellHealActionType extends BiEntityActionType {
                 .or(() -> getModifiedAmount(actor, livingTarget))
                 .ifPresent(healing -> {
                     float totalHealing = healing;
-
-                    if (FabricLoader.getInstance().isModLoaded("spell_power")) {
-                        SpellSchool school;
-                        try {
-                            school = SpellSchools.getSchool(magicSchool);
-                            if (school == null) {
-                                throw new IllegalArgumentException("Unknown magic school: " + magicSchool);
-                            }
-                        } catch (IllegalArgumentException e) {
-                            throw new IllegalArgumentException("Unknown magic school: " + magicSchool);
-                        }
-
-                        SpellPower.Result spellPowerResult = SpellPower.getSpellPower(school, (LivingEntity) actor);
-                        double finalSpellPower = switch (critBehavior) {
-                            case "always" -> spellPowerResult.forcedCriticalValue();
-                            case "never" -> spellPowerResult.nonCriticalValue();
-                            default -> spellPowerResult.randomValue();
-                        };
-
-                        totalHealing += finalSpellPower * scalingFactor;
-                    }
-
                     livingTarget.heal(totalHealing);
                 });
     }
@@ -108,6 +67,6 @@ public class SpellHealActionType extends BiEntityActionType {
 
     @Override
     public @NotNull ActionConfiguration<?> getConfig() {
-        return ModBientityActionTypes.SPELL_HEAL;
+        return ModBientityActionTypes.BIENTITY_HEAL;
     }
 }

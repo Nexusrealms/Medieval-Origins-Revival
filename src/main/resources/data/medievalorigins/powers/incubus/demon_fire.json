@@ -95,19 +95,13 @@
 								{
 									"type": "origins:if_else",
 									"if_action": {
-										"type": "medievalorigins:spell_damage",
+										"type": "origins:damage",
 										"base": 4,
-										"magic_school": "fire",
-										"crit_behavior": "normal",
-										"scaling_factor": 1.0,
 										"damage_type": "medievalorigins:blazenbreath"
 									},
 									"else_action": {
-										"type": "medievalorigins:spell_damage",
-										"base": 7,
-										"magic_school": "fire",
-										"crit_behavior": "normal",
-										"scaling_factor": 1.5,
+										"type": "origins:damage",
+										"amount": 10,
 										"damage_type": "medievalorigins:blazenbreath"
 									},
 									"condition": {

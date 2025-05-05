@@ -14,7 +14,7 @@
   "origin.medievalorigins.incubus.description": "-§l Notable Changes§r: \n§o§2+ Nether Bonuses\n§o§6• Fire-based\n§o§c- Damaged by Water§r\n§o§c- Weak in Overworld§r\n§lIncubi§r are evil servants of a dark power. They are powerful in their own realm, but in exchange for this they have given up their soul, and are weak to pure sources.",
 
   "origin.medievalorigins.dwarf.name": "Dwarf",
-  "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§6• Short: 102cm.3'7\"§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
+  "origin.medievalorigins.dwarf.description": "-§l Notable Changes§r: \n§o§2+ Mining, Caving§r\n§o§c- Sun sensitive \n- Can't swim§r\n§lDwarves§r are practical, stocky, and prideful. They excel at mining and living underground, but struggle with the daylight. Rock and stone, brother.",
 
   "origin.medievalorigins.wood_elf.name": "Wood Elf",
   "origin.medievalorigins.wood_elf.description": "-§l Notable Changes§r: \n§o§2+ Ranged Bonuses, Speed§r\n§o§6• Stealthy, Vegetarian§r\n§o§c- Defense§r\n§lWood Elves§r are a wise, long-lived race who live in harmony with the Earth. They are quick with a sword and bow and can outwit their enemies while among the trees.",
@@ -23,7 +23,7 @@
   "origin.medievalorigins.high_elf.description": "-§l Notable Changes§r: \n§o§2+ Magic, Unique Abilities§r\n§o§c- Physical Damage\n- Defense§r\n§lHigh Elves§r are notoriously arrogant, though undeniably talented; elemental magics course strongly through their blood, though they are weaker with weaponry.",
 
   "origin.medievalorigins.fae.name": "Fae",
-  "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§6• Short: 122cm.4'0\"§r\n§o§c- Loved by Mobs§r\n§o§c- Defense§r\n§lFae§r are short magical winged humanoids, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
+  "origin.medievalorigins.fae.description": "-§l Notable Changes§r: \n§o§2+ Hovering, Magic§r\n§o§c- Loved by Mobs§r\n§o§c- Defense§r\n§lFae§r are short magical winged humanoids, regarded as spirits of nature and said to haunt forests and lead travelers' astray. They are equal parts mystic and trickster.",
 
   "origin.medievalorigins.goblin.name": "Goblin",
   "origin.medievalorigins.goblin.description": "-§l Notable Changes§r: \n§o§2+ Gold Gear Bonuses§r\n§o§2+ Luck, Speed§r \n§o§6• Small: 92cm.3'3\"§r \n§o§c- Health, Defense§r\n§lGoblins§r are obsessed with gold and treasure and tend to find a little more loot wherever they look, but their small size leaves them vulnerable in combat.",
@@ -38,7 +38,7 @@
   "origin.medievalorigins.ogre.description": "-§l Notable Changes§r: \n§o§2+ Axe Bonuses, Defense §r\n§o§6• Massive: 268cm.9'5\"§r\n§o§c- Hunger, Speed §r\n§lOgres§r are a large, short-tempered, and brutish subspecies of Orc. Their lumbering size and limited intelligence are made up for by their raw strength.",
 
   "origin.medievalorigins.pixie.name": "Pixie",
-  "origin.medievalorigins.pixie.description": "-§l Notable Changes§r: \n§o§2+ Unique Flight, Odd§r\n§o§6• Tiny: 22cm.9\" §r\n§o§c- Defense, Reputation §r\nOften considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are whimsical and very, very small.",
+  "origin.medievalorigins.pixie.description": "-§l Notable Changes§r: \n§o§2+ Unique Flight, Odd§r\n§o§c- Defense, Reputation §r\nOften considered harbingers of good fortune, but also tricky, untrustworthy agents of mischief. Pixies are whimsical and very, very small.",
 
   "origin.medievalorigins.plague_victim.name": "Plague Victim",
   "origin.medievalorigins.plague_victim.description": "-§l Notable Changes§r: \n§o§2+ Withering §r\n§o§6• Unique playstyle §r\n§o§6• Undead §r\n§o§c- Defense, Reputation \n§o§c- Difficult§r\nDisease-ridden half-dead creatures who can no longer be called human, cursed and trapped in eternal suffering as a result of a strange magical illness.",

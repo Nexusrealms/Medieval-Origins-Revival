@@ -128,8 +128,8 @@
 	"flight_resource": {
 		"type": "origins:resource",
 		"min": 0,
-		"start_value": 100,
-		"max": 100,
+		"start_value": 20,
+		"max": 20,
 		"hud_render": {
 			"should_render": true,
 			"sprite_location": "origins:textures/gui/community/huang/resource_bar_01.png",
@@ -137,7 +137,7 @@
 			"condition": {
 				"type": "origins:resource",
 				"resource": "*:*_flight_resource",
-				"compare_to": 100,
+				"compare_to": 20,
 				"comparison": "<"
 			}
 		}
@@ -168,7 +168,7 @@
 	},
 	"restore_resource": {
 		"type": "origins:action_over_time",
-		"interval": 10,
+		"interval": 50,
 		"condition": {
 			"type": "origins:or",
 			"conditions": [
@@ -471,7 +471,7 @@
 										"type": "origins:resource",
 										"resource": "*:*_flight_resource",
 										"comparison": ">=",
-										"compare_to": 20
+										"compare_to": 10
 									}
 								]
 							},
@@ -479,7 +479,7 @@
 								"type": "origins:resource",
 								"resource": "*:*_flight_resource",
 								"comparison": ">=",
-								"compare_to": 50
+								"compare_to": 15
 							}
 						]
 					}
@@ -524,7 +524,7 @@
 							"resource": "*:*_flight_resource",
 							"modifier": {
 								"operation": "add_base_early",
-								"amount": -50
+								"amount": -10
 							}
 						},
 						"else_action": {
@@ -532,7 +532,7 @@
 							"resource": "*:*_flight_resource",
 							"modifier": {
 								"operation": "add_base_early",
-								"amount": -20
+								"amount": -15
 							}
 						}
 					},
@@ -608,7 +608,7 @@
 									"type": "origins:resource",
 									"resource": "*:*_flight_resource",
 									"comparison": ">=",
-									"compare_to": 25
+									"compare_to": 10
 								}
 							]
 						},
@@ -616,7 +616,7 @@
 							"type": "origins:resource",
 							"resource": "*:*_flight_resource",
 							"comparison": ">=",
-							"compare_to": 50
+							"compare_to": 10
 						}
 					]
 				}
@@ -665,7 +665,7 @@
 						"resource": "*:*_flight_resource",
 						"modifier": {
 							"operation": "add_base_early",
-							"amount": -50
+							"amount": -25
 						}
 					},
 					"else_action": {
