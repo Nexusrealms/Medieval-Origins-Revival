@@ -1,5 +1,6 @@
 package dev.muon.medievalorigins.item;
 
+import dev.cammiescorner.icarus.item.WingItem;
 import dev.muon.medievalorigins.MedievalOrigins;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -13,12 +14,11 @@ public class ModItems {
     private static final List<String> ORIGINS = List.of(
             "alfiq", "arachnae", "banshee", "incubus", "dwarf",
             "wood_elf", "high_elf", "fae", "goblin", "gorgon",
-            "moon_elf", "revenant", "ogre", "pixie",
-            "plague_victim", "siren", "valkyrie", "yeti"
+            "moon_elf", "ogre", "pixie",
+            "plague_victim", "siren", "yeti"
     );
 
     public static final Map<String, Item> PORTRAIT_ITEMS = new HashMap<>();
-
     private static Item registerPortrait(String origin) {
         Item portrait = Registry.register(
                 BuiltInRegistries.ITEM,
